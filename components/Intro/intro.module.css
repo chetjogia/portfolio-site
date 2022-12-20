@@ -3,6 +3,7 @@
   height: calc(100% - 128px);
   grid-template-columns:repeat(7,minmax(0,1fr));
   grid-template-rows:repeat(10,minmax(0,1fr)) ;
+  background-color: #FFFFFA;
 }
 
 .info{
