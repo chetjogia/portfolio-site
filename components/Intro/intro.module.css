@@ -1,0 +1,31 @@
+.container{
+  display: grid;
+  height: calc(100% - 128px);
+  grid-template-columns:repeat(7,minmax(0,1fr));
+  grid-template-rows:repeat(10,minmax(0,1fr)) ;
+}
+
+.info{
+    align-self: center;
+    justify-self: center;
+    display:flex;
+    width:85%;
+    flex-direction: column;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 4;
+    grid-row-end: 8;
+}
+
+
+.introduction{
+    font-size:1.5rem;
+}
+
+.job-role{
+    font-size: 3rem;
+}
+
+.paragraph{
+    margin-top: 15px;
+}
