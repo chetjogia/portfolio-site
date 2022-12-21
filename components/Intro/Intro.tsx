@@ -1,4 +1,6 @@
 import styles from "./intro.module.css";
+import Image from "next/image";
+import profile from "../../images/chetjogiaprofile.png"
 
 function Intro() {
   return (
@@ -15,9 +17,12 @@ function Intro() {
           risus hendrerit, varius augue vitae, pharetra orci. Integer pretium
           ligula sed libero aliquet gravida.
         </p>
-        <div className={styles["button-div"]}>
-          <button className={styles.button}>Projects</button>
-        </div>
+      </div>
+      <div className={styles["button-div"]}>
+        <button className={styles.button}>Projects</button>
+      </div>
+      <div className={styles["profile-div"]}>
+        <Image className={styles["image-div"]} src={profile} alt="profile"/>
       </div>
     </div>
   );
