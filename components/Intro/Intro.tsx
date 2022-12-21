@@ -23,6 +23,7 @@ function Intro() {
       </div>
       <div className={styles["profile-div"]}>
         <Image className={styles["image-div"]} src={profile} alt="profile"/>
+        <div className={styles["square-border"]}></div>
       </div>
     </div>
   );
