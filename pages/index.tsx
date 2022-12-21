@@ -4,13 +4,17 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro/Intro'
-
+import Project from '../components/Projects/Projects'
+import Carousel from '../components/Carousel/Carousel'
 
 export default function Home() {
   return (
     <>
       <Header/>
       <Intro/>
+ 
+      <Project/>
+     
       <Footer/>
     </>
   )
