@@ -9,7 +9,7 @@ function Header() {
         <h1 >Chetan Jogia</h1>
       </div>
 
-      <nav className="flex gap-10 self-center mr-10">
+      <nav className="flex gap-10 self-center mr-10 flex-wrap overflow-hidden">
         <Link href="/">Home</Link>
         <Link href="/Project">Projects</Link>
         <Link href="/CV">CV</Link>
