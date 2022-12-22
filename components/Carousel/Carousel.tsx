@@ -1,36 +1,43 @@
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import React from "react";
-import Slider from "react-slick";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination, Scrollbar, A11y, EffectCube } from "swiper";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "swiper/css/effect-cube";
 
-export default function Carousel() {
-  var settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 1
-  };
+// Import Swiper styles
+import "swiper/css";
+
+const Carousel = () => {
   return (
-    <Slider {...settings}>
-      <div className="h-20 w-5 border border-solid border-red-500">
-        <h3>hello</h3>
-      </div>
-      <div>
-        <h3>2</h3>
-      </div>
-      <div>
-        <h3>3</h3>
-      </div>
-      <div>
-        <h3>4</h3>
-      </div>
-      <div>
-        <h3>5</h3>
-      </div>
-      <div>
-        <h3>6</h3>
-      </div>
-    </Slider>
+    <>
+      <Swiper
+        slidesPerView={3}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <div className="frame">
+          <SwiperSlide>Slide 1</SwiperSlide>
+        </div>
+        <div  className="frame">
+          <SwiperSlide>Slide 2</SwiperSlide>
+        </div>
+        <div  className="frame">
+          <SwiperSlide>Slide 3</SwiperSlide>
+        </div>
+      </Swiper>
+    </>
   );
-}
+};
+
+export default Carousel;

@@ -33,20 +33,13 @@
     font-size: 1.5em;
   }
 
-  .carousel{
-    display:inline;
-    align-self: center;
-    justify-self: center;
-    border:solid;
+
+
+  .car-div{
+  display:flex;
     grid-column-start: 3;
     grid-column-end:7;
     grid-row-start: 5;
     grid-row-end: 9;
-    height:80%;
-    width:100%;
   }
 
-  .slick-dots{
-    margin-top:100px;
-  }
-  
