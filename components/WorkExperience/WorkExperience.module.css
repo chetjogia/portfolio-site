@@ -1,0 +1,17 @@
+.work-exp{
+    display:flex;
+    flex-direction: column;
+    gap:0.6rem;
+}
+
+
+
+.header{
+    justify-content: space-between;
+    display:flex;
+
+}
+
+.header>h4{
+    font-weight: 700;
+}

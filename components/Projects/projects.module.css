@@ -4,12 +4,12 @@
     position: relative;
     display: grid;
     width: 100%;
-    height: calc(100% - 128px);
-    max-height: calc(100% - 128px);
+    height: calc(100vh - 128px);
+    max-height: calc(100vh - 128px);
     grid-template-columns: repeat(8, minmax(0, 1fr));
     grid-template-rows: repeat(10, minmax(0, 1fr));
     background-color: #fffffa;
- /*    overflow: hidden; */
+    overflow: hidden;
   }
 
 
@@ -22,15 +22,18 @@
     grid-column-end:8;
     grid-row-start: 2;
     grid-row-end: 4;
-    gap:1vw;
+    gap:0.3vw;
+
   }
 
   .header>h1{
-    font-size: 3.5em;
+    font-size: 2.5rem;
+    line-height: 2.5rem;
   }
 
   .header>p{
-    font-size: 1.5em;
+    font-size: 1.5rem;
+    font-weight:lighter;
   }
 
 

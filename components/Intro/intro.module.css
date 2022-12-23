@@ -2,8 +2,8 @@
   position: relative;
   display: grid;
   width: 100%;
-  height: calc(100% - 128px);
-  max-height: calc(100% - 128px);
+  height: calc(100vh - 128px);
+  max-height: calc(100vh - 128px);
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(10, minmax(0, 1fr));
   background-color: #fffffa;

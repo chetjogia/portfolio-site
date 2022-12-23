@@ -1,0 +1,97 @@
+.container {
+  position: relative;
+  display: grid;
+  width: 100%;
+ 
+  grid-template-columns: repeat(8, minmax(0, 1fr));
+  grid-template-rows: repeat(10, minmax(0, 1fr));
+  background-color: #fffffa;
+  overflow: hidden;
+
+}
+
+.container:before {
+  position: relative;
+  content: "";
+  background-color: lightcoral;
+  opacity: 0.15;
+  grid-row-start: 1;
+  grid-row-end: 11;
+  grid-column-start: 1;
+  grid-column-end: 6;
+  clip-path: polygon(0% 0%, 40% 0%, 100% 100%, 0 100%);
+  z-index: 0;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  height:100%;
+  width:100%;
+  grid-column-start: 2;
+  grid-column-end:8;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  margin-top: 1.5rem;
+  justify-content: flex-end;
+}
+
+.header>h1{
+
+  font-size: 2.5rem;
+
+}
+
+.header>p{
+  font-size: 1.5em;
+}
+
+.work-exp{
+  position: relative;
+  display:flex;
+  flex-direction: column;
+  grid-column-start: 2;
+  grid-column-end: 8;
+  grid-row-start: 3;
+  grid-row-end:10;
+  width:100%;
+  height:100%;
+
+}
+
+.work-exp::before{
+  content:"";
+  left:50%;
+  top: -10%;
+  position:absolute;
+  width:3px;
+  height:115%;
+  background: lightcoral;
+}
+
+.exp-1{
+  width:40%;
+
+}
+
+.exp-2{
+  width:40%;
+  
+  align-self: flex-end;
+}
+
+.exp-3{
+  width:40%;
+
+}
+
+.exp-4{
+  width:40%;
+
+  align-self: flex-end;
+}
+
+.exp-5{
+  width:40%;
+
+}

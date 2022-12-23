@@ -43,20 +43,11 @@
   left: 0;
   right: 0;
   transform: translateY(85%);
-  transition: backdrop-filter 400ms ease-in, transform 300ms ease-in,
-    background-color 400ms ease-in;
+  transition: backdrop-filter 700ms ease-in, transform 400ms ease-in,
+    background-color 700ms ease-in;
     background-color: hsl(245 57% 21%/0.5);
 }
 
-.project-body {
-    position:relative;
-  opacity: 0;
-  transition: opacity 1000ms ease;
-  color: white;
-  padding: 0;
-  padding: 0 1rem;
-
-}
 
 .card-content:hover > .card-body > .project-body {
   opacity: 1;
@@ -118,4 +109,14 @@ top:0;
 
 .card-content:hover > .card-body > .button-container {
   opacity: 1;
+}
+
+.project-body {
+ position:relative;
+  opacity: 0;
+  transition: opacity 1300ms ease-in;
+  color: white;
+  padding: 0;
+  padding: 0 1rem;
+
 }
