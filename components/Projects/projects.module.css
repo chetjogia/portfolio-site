@@ -9,7 +9,7 @@
     grid-template-columns: repeat(8, minmax(0, 1fr));
     grid-template-rows: repeat(10, minmax(0, 1fr));
     background-color: #fffffa;
-    overflow: hidden;
+ /*    overflow: hidden; */
   }
 
 
@@ -34,12 +34,4 @@
   }
 
 
-
-  .car-div{
-  display:flex;
-    grid-column-start: 3;
-    grid-column-end:7;
-    grid-row-start: 5;
-    grid-row-end: 9;
-  }
 

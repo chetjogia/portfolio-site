@@ -1,0 +1,8 @@
+.card-container{
+    display:flex;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 6;
+    grid-row-end: 10;
+    justify-content: space-evenly;
+}

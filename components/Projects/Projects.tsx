@@ -1,6 +1,7 @@
 import styles from "./projects.module.css";
 import Image from "next/image";
-import Carousel from "../Carousel/Carousel";
+import Card from "../Card/Card";
+import CardContainer from "../CardContainer/CardContainer";
 
 function Projects() {
   return (
@@ -13,9 +14,7 @@ function Projects() {
           ligula sed libero aliquet gravida.
         </p>
       </div>
-      <div className={styles["car-div"]}>
-        <Carousel />
-      </div>
+    <CardContainer/>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css'
 import Intro from '../components/Intro/Intro'
 import Project from '../components/Projects/Projects'
 import Carousel from '../components/Carousel/Carousel'
+import Card from '../components/Card/Card'
 
 export default function Home() {
   return (
@@ -14,7 +15,7 @@ export default function Home() {
       <Intro/>
  
       <Project/>
-     
+  
       <Footer/>
     </>
   )
