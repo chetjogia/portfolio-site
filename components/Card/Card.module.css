@@ -45,9 +45,8 @@
   transform: translateY(85%);
   transition: backdrop-filter 700ms ease-in, transform 400ms ease-in,
     background-color 700ms ease-in;
-    background-color: hsl(245 57% 21%/0.5);
+  background-color: hsl(245 57% 21%/0.5);
 }
-
 
 .card-content:hover > .card-body > .project-body {
   opacity: 1;
@@ -68,10 +67,9 @@
 }
 
 .icon {
-
   height: 3rem;
   color: white;
-  padding: 0.2rem ;
+  padding: 0.2rem;
 }
 
 .project-header {
@@ -84,39 +82,39 @@
   padding-top: 0.3em;
   color: white;
   transition: color 500ms ease;
-
 }
 
 .project-body:after {
   position: absolute;
   content: "";
   left: 0;
-top:0;
+  top: 0;
   height: 3px;
   width: calc(100% - 2rem);
-  margin-top:-0.6rem;
+  margin-top: -0.6rem;
   background-color: lightcoral;
-  transform:translateX(-100%);
+  transform: translateX(-100%);
   transform-origin: left;
   transition: transform 900ms ease-in;
 
 }
 
-.card-content:hover .project-body::after{
-    transform:translateX(0%)
+.card-content:hover .project-body::after {
+  transition-delay: 500ms;
+  transform: translateX(0%);
+ 
 }
-
 
 .card-content:hover > .card-body > .button-container {
   opacity: 1;
+ 
 }
 
 .project-body {
- position:relative;
+  position: relative;
   opacity: 0;
   transition: opacity 1300ms ease-in;
   color: white;
   padding: 0;
   padding: 0 1rem;
-
 }

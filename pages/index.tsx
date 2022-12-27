@@ -8,6 +8,7 @@ import Project from '../components/Projects/Projects'
 import Carousel from '../components/Carousel/Carousel'
 import Card from '../components/Card/Card'
 import CV from '../components/CV/CV'
+import Contact from '../components/Contact/Contact'
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Intro/>
       <Project/>
       <CV/>
+      <Contact/>
       <Footer/>
     </>
   )
