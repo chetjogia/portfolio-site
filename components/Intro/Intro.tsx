@@ -1,6 +1,8 @@
 import styles from "./intro.module.css";
 import Image from "next/image";
 import profile from "../../images/chetjogiaprofile.png"
+import {SlArrowDown} from 'react-icons/sl'
+import Link from "next/link";
 
 function Intro() {
   return (
@@ -19,7 +21,9 @@ function Intro() {
         </p>
       </div>
       <div className={styles["button-div"]}>
-        <button className={styles.button}>Projects</button>
+       {/*  <button className={styles.button}>Contact Me</button> */}
+       {/*  <p className={styles.seemore}>See More</p> */}
+        <Link className="w-8" href='#projects' scroll={false}><SlArrowDown className={styles.downarrow}/></Link>
       </div>
       <div className={styles["profile-div"]}>
         <Image className={styles["image-div"]} src={profile} alt="profile"/>

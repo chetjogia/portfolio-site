@@ -1,7 +1,7 @@
 import { FormEvent, FormEventHandler, MouseEvent, useRef } from "react";
 import styles from "./Form.module.css";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa"
-//CREATE STATE TO HANDLE WHAT IS INSIDE THE FORM TO SEND FETCH REQUEST TO API ENDPONT: localhost:3000/api/contact
+import Link from "next/link";
 
 function Form() {
   const inputName = useRef<HTMLInputElement>(null);
@@ -32,16 +32,15 @@ function Form() {
   return (
     <div id="contact" className={styles["container"]}>
       <div className={styles["header"]}>
-        <h1>Lets Collaborate</h1>
+        <h1>Contact Me</h1>
         <p>
           Thanks for checking out my portfolio! If you are interested in working with me or want more information
-          about my work, get in touch by filling out the form or contacting me
-          through the links below:
+          about my work, get in touch by filling out the form or clicking on one of the icons below:
         </p>
         <div className={styles.buttons}>
-        <FaGithub className={styles.icon} />
-        <FaLinkedin className={styles.icon}/>
-        <FaInstagram className={styles.icon}/>
+        <Link className={styles.link} href="https://github.com/chetjogia" target="_blank"><FaGithub  className={styles.icon} /></Link>
+        <Link className={styles.link} href="https://linkedin.com/in/chetanjogia" target="_blank"><FaLinkedin className={styles.icon}/></Link>
+        <Link className={styles.link} href="https://www.instagram.com/chetjogiaguitar/" target="_blank"><FaInstagram className={styles.icon}/></Link>
         </div>
       </div>
 

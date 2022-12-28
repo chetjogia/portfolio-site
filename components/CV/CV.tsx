@@ -1,5 +1,8 @@
 import styles from "./cv.module.css";
 import WorkExperience from "../WorkExperience/WorkExperience";
+import Link from "next/link";
+import {SlArrowDown} from 'react-icons/sl'
+
 
 function Intro() {
   return (
@@ -23,7 +26,11 @@ function Intro() {
         <div className={styles["exp-5"]}>
           <WorkExperience/>
         </div>
+        
 
+      </div>
+      <div className={styles["button-div"]}>
+        <Link className="w-8" href='#contact' scroll={false}><SlArrowDown className={styles.downarrow}/></Link>
       </div>
     </div>
   );

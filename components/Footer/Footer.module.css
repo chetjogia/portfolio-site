@@ -1,0 +1,19 @@
+.buttons{
+    display:flex;
+    height: 80%;
+    width:15%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+.icon{
+    height:100%;
+    width:100%;
+    color: #FFFFFA
+}
+
+.link{
+    height:80%;
+    width:100%;
+}

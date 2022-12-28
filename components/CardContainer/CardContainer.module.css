@@ -2,9 +2,8 @@
     display:flex;
     grid-column-start: 2;
     grid-column-end: 8;
-    grid-row-start: 6;
-    grid-row-end: 10;
+    grid-row-start: 5;
+    grid-row-end: 9;
     justify-content: space-evenly;
     margin-bottom: 1.5rem ;
-    margin-top: -1.5rem;
 }
