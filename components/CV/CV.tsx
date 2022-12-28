@@ -3,7 +3,7 @@ import WorkExperience from "../WorkExperience/WorkExperience";
 
 function Intro() {
   return (
-    <div className={styles["container"]}>
+    <div id="CV" className={styles["container"]}>
       <div className={styles["header"]}>
         <h1>Curriculum Vitae</h1>
       </div>

@@ -8,9 +8,12 @@
   grid-template-rows: repeat(10, minmax(0, 1fr));
   background-color: #fffffa;
   overflow: hidden;
+  scroll-behavior: smooth;
+
 }
 
-.container:before {
+
+.container:after {
   position: relative;
   content: "";
   background-color: lightcoral;
@@ -53,7 +56,7 @@
   display: inline-block;
   width: 80%;
   height: 30%;
-  font-size: 1.3vw;
+  font-size: 1.2vw;
   font-weight: lighter;
 }
 

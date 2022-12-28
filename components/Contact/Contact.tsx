@@ -4,7 +4,7 @@ import styles from './Contact.module.css'
 
 function Contact() {
   return (
-    <div className={styles["container"]}>
+    <div id="contact" className={styles["container"]}>
       <Form/>
     </div>
   );

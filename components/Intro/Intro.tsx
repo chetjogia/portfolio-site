@@ -4,7 +4,7 @@ import profile from "../../images/chetjogiaprofile.png"
 
 function Intro() {
   return (
-    <div className={styles["container"]}>
+    <div id="intro" className={styles["container"]}>
       <div className={styles.info}>
         <h2 className={styles.introduction}>
           Hey I&apos;m, <span className="text-light-coral">Chetan Jogia</span>

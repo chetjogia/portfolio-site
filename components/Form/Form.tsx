@@ -1,33 +1,69 @@
-import { FormEvent, FormEventHandler, MouseEvent } from "react";
+import { FormEvent, FormEventHandler, MouseEvent, useRef } from "react";
 import styles from "./Form.module.css";
+import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa"
+//CREATE STATE TO HANDLE WHAT IS INSIDE THE FORM TO SEND FETCH REQUEST TO API ENDPONT: localhost:3000/api/contact
 
 function Form() {
-    async function submitContact(event:FormEvent){
-        event.preventDefault();
-        alert(`hello`);
-    }
+  const inputName = useRef<HTMLInputElement>(null);
+  const inputEmail = useRef<HTMLInputElement>(null);
+  const inputSubject = useRef<HTMLInputElement>(null);
+  const inputMessage = useRef<HTMLTextAreaElement>(null);
 
+  async function submitContact(event: FormEvent) {
+    event.preventDefault();
+
+    let data = {
+      email: inputEmail.current?.value,
+      name: inputName.current?.value,
+      subject: inputSubject.current?.value,
+      message: inputMessage.current?.value,
+    };
+
+    const response = await fetch(`/api/contact`, {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+  }
 
   return (
-    <div className={styles["container"]}>
-      <div className="mb-2 text-xl font-bold">Contact us</div>
-      <form className="flex flex-col" onSubmit={submitContact}>
-        <label htmlFor="name" className="mb-2 italic">
+    <div id="contact" className={styles["container"]}>
+      <div className={styles["header"]}>
+        <h1>Lets Collaborate</h1>
+        <p>
+          Thanks for checking out my portfolio! If you are interested in working with me or want more information
+          about my work, get in touch by filling out the form or contacting me
+          through the links below:
+        </p>
+        <div className={styles.buttons}>
+        <FaGithub className={styles.icon} />
+        <FaLinkedin className={styles.icon}/>
+        <FaInstagram className={styles.icon}/>
+        </div>
+      </div>
+
+      <form className={styles.form} onSubmit={submitContact}>
+        <label htmlFor="name" className="mt-4 mb-2 italic">
           Name
         </label>
         <input
-          className="mb-4 border-b-2"
+          ref={inputName}
+          className={styles.inputName}
           id="name"
           name="name"
           type="text"
           autoComplete="name"
           required
         />
-        <label htmlFor="name" className="mb-2 italic">
+        <label htmlFor="email" className="mb-2 italic">
           Email
         </label>
         <input
-          className="mb-4 border-b-2"
+          ref={inputEmail}
+          className={styles.inputEmail}
           id="email"
           name="email"
           type="email"
@@ -35,20 +71,34 @@ function Form() {
           required
         />
         <label htmlFor="name" className="mb-2 italic">
-          Message
+          Subject
         </label>
         <input
-          className="mb-4 border-b-2 h-36"
-          size={2000}
-          id="email"
-          name="email"
+          ref={inputSubject}
+          className={styles.inputSubject}
+          id="subject"
+          name="subject"
           type="text"
-          autoComplete="email"
+          autoComplete="subject"
           required
         />
+        <label htmlFor="message" className="mb-2 italic">
+          Message
+        </label>
+        <textarea
+          ref={inputMessage}
+          className={styles.inputMessage}
+          id="message"
+          name="message"
+          rows={4}
+          cols={50}
+          autoComplete="message"
+          required
+        ></textarea>
+
         <button
           type="submit"
-          className="px-4 py-2 font-bold text-white bg-blue-500 rounded-full hover:bg-blue-700"
+          className="px-4 py-2 font-bold text-white bg-light-coral rounded-xl"
         >
           Submit
         </button>

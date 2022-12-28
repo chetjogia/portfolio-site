@@ -5,7 +5,7 @@ import CardContainer from "../CardContainer/CardContainer";
 
 function Projects() {
   return (
-    <div className={styles["container"]}>
+    <div id="projects" className={styles["container"]}>
       <div className={styles["header"]}>
         <h1>Projects</h1>
         <p>

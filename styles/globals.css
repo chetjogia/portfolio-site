@@ -1,46 +1,45 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-
-
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-
-html,body, #__next, #root{
-  width:100%;
- 
+html,
+body,
+#__next,
+#root {
+  width: 100%;
+  scroll-behavior: smooth;
   font-size: 100%;
-  z-index:0px;
+  z-index: 0px;
+  scroll-padding-top: 64px;
 }
 
-.swiper{
-	display:flex;
-	height:100%;
-	border:solid;
 
-	align-self: center;
-	
+
+.swiper {
+  display: flex;
+  height: 100%;
+  border: solid;
+
+  align-self: center;
 }
 
-.swiper-wrapper{
-	border:solid;
-	border:green;
+.swiper-wrapper {
+  border: solid;
+  border: green;
 }
 
-.frame{
-	height:100%;
-	padding:10px;
+.frame {
+  height: 100%;
+  padding: 10px;
 }
 
-.swiper-slide{
-	height:20%;
-	margin-right:0px;
-background-color: lightcoral;
+.swiper-slide {
+  height: 20%;
+  margin-right: 0px;
+  background-color: lightcoral;
 }
