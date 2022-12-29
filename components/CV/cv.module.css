@@ -117,7 +117,7 @@
 @media (max-width: 450px) {
 
   .header > h1 {
-    font-size: 2rem;
+    font-size: min(5vh, 9vw);
   }
 
   .container{

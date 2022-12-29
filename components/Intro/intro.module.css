@@ -7,7 +7,7 @@
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(10, minmax(0, 1fr));
   background-color: #fffffa;
-  overflow: hidden;
+ overflow: hidden;
   scroll-behavior: smooth;
 }
 
@@ -37,7 +37,8 @@
   grid-row-end: 8;
   gap: 3vmin;
   justify-content: center;
-  overflow: hidden;
+ 
+  overflow: visible;
   z-index: 1;
 }
 

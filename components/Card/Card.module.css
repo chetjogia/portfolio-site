@@ -70,19 +70,21 @@
   }
 
   .icon {
-    height: 4.5vw;
+    height: min(3rem,4vw);
     color: white;
     padding: 0.2rem;
   }
 
   .project-header {
     padding: 0;
+    grid-row-start: 1;
+    grid-row-end:2;
     position: relative;
     font-weight: bold;
     width: fit-content;
-    font-size: min(1.3rem, 1.4vw);
+    font-size: min(1.4rem, 1.4vw);
     padding-left: 1rem;
-    padding-top: 0.3em;
+    padding-top: 0.2rem;
     color: white;
     transition: color 500ms ease;
   }
@@ -117,7 +119,7 @@
     color: white;
     padding: 0;
     padding: 0 1rem;
-    font-size: min(1.4rem, 1.4vw);
+    font-size: min(0.8rem, 1.4vw);
   }
 }
 
@@ -217,6 +219,7 @@
       margin: 0;
       background-color: hsl(245 57% 21%/0.5);
       border-radius: 10px;
+      gap:0px;
     }
 
     .card-body {
@@ -238,7 +241,6 @@
 
     .button-container {
       display: flex;
-
       flex-direction: column;
       justify-content: center;
       padding-right: 0.6rem;
@@ -262,14 +264,14 @@
     }
 
     .icon {
-      height: 3rem;
-      width: 2rem;
+      height: 2rem;
+      width: 1rem;
     }
 
     .project-body {
       display: flex;
       opacity: 1;
-      font-size: 0.7rem;
+      font-size: 0.5rem;
     }
   }
 }

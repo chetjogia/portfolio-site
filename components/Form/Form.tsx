@@ -45,6 +45,7 @@ function Form() {
       </div>
 
       <form className={styles.form} onSubmit={submitContact}>
+       
         <label htmlFor="name" className="mt-4 mb-2 italic">
           Name
         </label>
@@ -97,7 +98,7 @@ function Form() {
 
         <button
           type="submit"
-          className="px-4 py-2 font-bold text-white bg-light-coral rounded-xl"
+          className="mt-3 px-4 py-2 font-bold text-white bg-light-coral rounded-xl"
         >
           Submit
         </button>
