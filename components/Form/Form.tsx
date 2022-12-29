@@ -2,17 +2,19 @@ import { FormEvent, FormEventHandler, MouseEvent, useRef } from "react";
 import styles from "./Form.module.css";
 import {FaGithub, FaInstagram, FaLinkedin} from "react-icons/fa"
 import Link from "next/link";
+import emailjs from '@emailjs/browser';
 
 function Form() {
   const inputName = useRef<HTMLInputElement>(null);
   const inputEmail = useRef<HTMLInputElement>(null);
   const inputSubject = useRef<HTMLInputElement>(null);
   const inputMessage = useRef<HTMLTextAreaElement>(null);
+  const form = useRef<HTMLFormElement>(null);
 
   async function submitContact(event: FormEvent) {
     event.preventDefault();
 
-    let data = {
+   /*  let data = {
       email: inputEmail.current?.value,
       name: inputName.current?.value,
       subject: inputSubject.current?.value,
@@ -26,7 +28,21 @@ function Form() {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(data),
-    });
+    }); */
+
+    const serviceID = 'default_service';
+   const templateID = 'template_vqa9l3a';
+    const publicKey = 'VSACAKf_-IQci04RW'
+
+    if(form.current){
+      emailjs.sendForm(serviceID, templateID, form.current, publicKey)
+      .then((result) => {
+       console.log(result.text);
+   }, (error) => {
+       console.log(error.text);
+   });
+    }
+
   }
 
   return (
@@ -44,7 +60,7 @@ function Form() {
         </div>
       </div>
 
-      <form className={styles.form} onSubmit={submitContact}>
+      <form ref={form} className={styles.form} onSubmit={submitContact}>
        
         <label htmlFor="name" className="mt-4 mb-2 italic">
           Name
@@ -53,7 +69,7 @@ function Form() {
           ref={inputName}
           className={styles.inputName}
           id="name"
-          name="name"
+          name="from_name"
           type="text"
           autoComplete="name"
           required
@@ -65,7 +81,7 @@ function Form() {
           ref={inputEmail}
           className={styles.inputEmail}
           id="email"
-          name="email"
+          name="from_email"
           type="email"
           autoComplete="email"
           required
