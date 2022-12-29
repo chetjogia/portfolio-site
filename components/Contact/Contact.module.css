@@ -10,3 +10,12 @@
     overflow: hidden;
     scroll-behavior: smooth;
   }
+
+
+  @media(max-width:450px){
+    .container{
+      height: fit-content;
+      max-height: none;
+    }
+
+  }

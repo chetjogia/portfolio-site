@@ -112,3 +112,91 @@
   width: 100%;
   cursor: pointer;
 }
+
+
+@media (max-width: 450px) {
+
+  .header > h1 {
+    font-size: 2rem;
+  }
+
+  .container{
+    height: calc(100vh - 128px);
+    max-height: calc(100vh - 128px);
+    
+  }
+
+  .container:before {
+    position: relative;
+    content: "";
+    background-color: lightcoral;
+    opacity: 0.15;
+    grid-row-start: 1;
+    grid-row-end:11;
+    grid-column-start: 1;
+    grid-column-end: 6;
+    clip-path: polygon(0% 0%, 40% 0%, 100% 100%, 0 100%);
+    z-index: 0;
+  }
+
+  .work-exp{
+   
+    height:fit-content;
+    gap: 2rem;
+    grid-column-start: 2;
+    grid-column-end: 8;
+    grid-row-start: 2;
+    grid-row-end: 10;
+    margin-top:2.5rem;
+  }
+
+ 
+
+  .work-exp::before {
+    content: "";
+    left: 50%;
+    top: -10%;
+    margin-left: -1.5px;
+    position: absolute;
+    width: 0px;
+    height: 0%;
+    background: lightcoral;
+  }
+
+  .exp-1 {
+
+    width: 100%;
+  }
+  
+  .exp-2 {
+    width: 100%;
+    align-self: auto;
+
+  }
+  
+  .exp-3 {
+    width: 100%;
+  }
+  
+  .exp-4 {
+    width: 100%;
+    align-self: auto;
+  
+  }
+  
+  .exp-5 {
+    width: 100%;
+    align-self: auto;
+  }
+
+  .button-div {
+
+    grid-column-start: 4;
+    grid-column-end: 6;
+    grid-row-start: 10;
+    grid-row-end:11;
+    margin-top: 2rem;
+
+  }
+  
+}

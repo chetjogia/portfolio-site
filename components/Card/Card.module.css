@@ -1,118 +1,275 @@
-.card-content {
-  position: relative;
-  aspect-ratio: 1;
-  border-radius: 10px;
-  overflow: hidden;
+@media (hover) {
+  .card-content {
+    position: relative;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    overflow: hidden;
 
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+  .card-content::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+  }
+
+  .card-image {
+    transform: scale(210%) translateY(5%);
+  }
+
+  .card-content:hover > .card-body,
+  .card-content:focus > .card-body {
+    transform: translateY(0%);
+    backdrop-filter: blur(10px);
+    background-color: hsl(245 57% 21%/0.5);
+  }
+
+  .text {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    gap: 1rem;
+  }
+
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    gap: 1em;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(85%);
+    transition: backdrop-filter 700ms ease-in, transform 400ms ease-in,
+      background-color 700ms ease-in;
+    background-color: hsl(245 57% 21%/0.5);
+  }
+
+  .card-content:hover > .card-body > .text > .project-body {
+    opacity: 1;
+  }
+
+  .button-container {
+    position: absolute;
+    padding: 0.5rem 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    gap: 3em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 1000ms ease;
+  }
+
+  .icon {
+    height: 4.5vw;
+    color: white;
+    padding: 0.2rem;
+  }
+
+  .project-header {
+    padding: 0;
+    position: relative;
+    font-weight: bold;
+    width: fit-content;
+    font-size: min(1.3rem, 1.4vw);
+    padding-left: 1rem;
+    padding-top: 0.3em;
+    color: white;
+    transition: color 500ms ease;
+  }
+
+  .project-body:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    height: 3px;
+    width: calc(100% - 2rem);
+    margin-top: -0.6rem;
+    background-color: lightcoral;
+    transform: translateX(-100%);
+    transform-origin: left;
+    transition: transform 900ms ease-in;
+  }
+
+  .card-content:hover .project-body::after {
+    transition-delay: 500ms;
+    transform: translateX(0%);
+  }
+
+  .card-content:hover > .card-body > .button-container {
+    opacity: 1;
+  }
+
+  .project-body {
+    position: relative;
+    opacity: 0;
+    transition: opacity 1300ms ease-in;
+    color: white;
+    padding: 0;
+    padding: 0 1rem;
+    font-size: min(1.4rem, 1.4vw);
+  }
 }
 
-.card-content::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  left: 0;
-  top: 0;
-  right: 0;
-}
+@media (hover: none) {
+  .card-content {
+    display: flex;
 
-.card-image {
+    border: solid;
+    margin-left: 1rem;
+    height: 35%;
+    width: 80%;
+    overflow: visible;
+    align-items: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0;
+    background-color: hsl(245 57% 21%/0.5);
+    border-radius: 10px;
+    gap: 1rem;
+  }
 
- 
-  transform: scale(210%) translateY(5%);
-}
+  .card-body {
+    display: flex;
+    height: 100%;
+    align-self: flex-end;
+    width: 80%;
 
-.card-content:hover > .card-body,
-.card-content:focus > .card-body {
-  transform: translateY(0%);
-  backdrop-filter: blur(10px);
-  background-color: hsl(245 57% 21%/0.5);
-}
+    color: white;
+  }
 
-.card-body {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  gap: 1em;
-  bottom: 0;
-  top: 0;
-  left: 0;
-  right: 0;
-  transform: translateY(85%);
-  transition: backdrop-filter 700ms ease-in, transform 400ms ease-in,
-    background-color 700ms ease-in;
-  background-color: hsl(245 57% 21%/0.5);
-}
+  .image-div {
+    display: flex;
 
-.card-content:hover > .card-body > .project-body {
-  opacity: 1;
-}
+    height: 100%;
+    aspect-ratio: 1;
+    padding: 0.3rem;
+    margin: 1rem;
+  }
 
-.button-container {
-  position: absolute;
-  padding: 0.5rem 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  gap: 3em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 1000ms ease;
-}
+  .button-container {
+    display: flex;
 
-.icon {
-  height: 4.5vw;
-  color: white;
-  padding: 0.2rem;
-}
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 0.6rem;
+  }
 
-.project-header {
-  padding: 0;
-  position: relative;
-  font-weight: bold;
-  width: fit-content;
-  font-size: min(1.3rem, 1.4vw);
-  padding-left: 1rem;
-  padding-top: 0.3em;
-  color: white;
-  transition: color 500ms ease;
-}
+  .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    padding-left: 0;
+    padding-right: 0.6rem;
+  }
 
-.project-body:after {
-  position: absolute;
-  content: "";
-  left: 0;
-  top: 0;
-  height: 3px;
-  width: calc(100% - 2rem);
-  margin-top: -0.6rem;
-  background-color: lightcoral;
-  transform: translateX(-100%);
-  transform-origin: left;
-  transition: transform 900ms ease-in;
+  .open-git {
+    display: flex;
+  }
 
-}
+  .button-container {
+    display: flex;
+    flex-direction: row;
 
-.card-content:hover .project-body::after {
-  transition-delay: 500ms;
-  transform: translateX(0%);
- 
-}
+    width: 30%;
+    align-items: center;
+    gap: 1rem;
+    padding: 0;
+  }
 
-.card-content:hover > .card-body > .button-container {
-  opacity: 1;
- 
-}
+  .open-site {
+    display: flex;
+  }
 
-.project-body {
-  position: relative;
-  opacity: 0;
-  transition: opacity 1300ms ease-in;
-  color: white;
-  padding: 0;
-  padding: 0 1rem;
-  font-size:min(1.4rem,1.4vw)
+  .icon {
+    height: 2rem;
+    width: 2rem;
+  }
+
+  .project-body {
+    display: flex;
+    opacity: 1;
+    font-size: 0.7rem;
+  }
+
+  @media (max-width: 450px) {
+    .card-content {
+      display: flex;
+      border: solid;
+      margin-left: 1rem;
+      height: 30%;
+      width: 90%;
+      overflow: visible;
+      align-items: flex-end;
+      align-items: center;
+      margin: 0;
+      background-color: hsl(245 57% 21%/0.5);
+      border-radius: 10px;
+    }
+
+    .card-body {
+      display: flex;
+      height: 100%;
+      align-self: flex-end;
+
+      color: white;
+    }
+
+    .image-div {
+      display: flex;
+
+      width: 60%;
+      aspect-ratio: 1;
+
+      margin: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+
+      flex-direction: column;
+      justify-content: center;
+      padding-right: 0.6rem;
+    }
+
+    .text {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 1rem;
+      padding-left: 0;
+      padding-right: 0.6rem;
+    }
+
+    .open-git {
+      display: flex;
+    }
+
+    .open-site {
+      display: flex;
+    }
+
+    .icon {
+      height: 3rem;
+      width: 2rem;
+    }
+
+    .project-body {
+      display: flex;
+      opacity: 1;
+      font-size: 0.7rem;
+    }
+  }
 }
