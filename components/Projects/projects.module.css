@@ -23,17 +23,17 @@
     grid-column-end:8;
     grid-row-start: 2;
     grid-row-end: 4;
-    gap:1.5vw;
+    gap:2vw;
 
   }
 
   .header>h1{
-    font-size: 2.5rem;
+    font-size: max(2.5rem, 4vw);
     line-height: 2.5rem;
   }
 
   .header>p{
-    font-size: 1.5rem;
+    font-size: min(1.3rem,3vw);
     font-weight:lighter;
   }
 
@@ -62,3 +62,6 @@
     width:100%;
     cursor: pointer;
   }
+
+
+

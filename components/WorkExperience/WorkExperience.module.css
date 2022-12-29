@@ -13,5 +13,23 @@
 }
 
 .header>h4{
+
+    font-size:min(1rem,2vw);
+    line-height:2vw;
     font-weight: 700;
+    height:fit-content;
+    align-self: flex-end;
+}
+
+.header>p{
+
+    align-self: flex-end;
+    height:fit-content;
+    font-size: min(1rem,2vw);
+  line-height: 2vw;
+  text-align: bottom;
+}
+
+.work-body>p{
+    font-size: min(1rem,2vw);
 }

@@ -9,9 +9,7 @@
   background-color: #fffffa;
   overflow: hidden;
   scroll-behavior: smooth;
-
 }
-
 
 .container:after {
   position: relative;
@@ -31,7 +29,7 @@
   justify-self: center;
   display: flex;
   height: 100%;
-  width: 80%;
+  width: 90%;
   flex-direction: column;
   grid-column-start: 2;
   grid-column-end: 6;
@@ -56,7 +54,7 @@
   display: inline-block;
   width: 80%;
   height: 30%;
-  font-size: 1.2vw;
+  font-size: min(1rem, 2vw);
   font-weight: lighter;
 }
 
@@ -78,11 +76,10 @@
   gap: 1rem;
 }
 
-.downarrow{
-
-  color:lightcoral;
-  height:100%;
-  width:100%;
+.downarrow {
+  color: lightcoral;
+  height: 100%;
+  width: 100%;
   cursor: pointer;
 }
 
@@ -126,7 +123,67 @@
   margin-left: 15%;
 }
 
-.seemore{
-  color:lightcoral;
- 
+.seemore {
+  color: lightcoral;
+}
+
+@media (max-width: 450px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    padding:2vw;
+    gap:2.5rem;
+  
+  }
+
+  .container:after {
+    position: absolute;
+    content: "";
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: lightcoral;
+    opacity: 0.15;
+    clip-path: polygon(0% 0%, 20% 0%, 100% 100%, 0 100%);
+    z-index: 0;
+  }
+
+  .info {
+    padding:2rem;
+    text-align: center;
+    justify-content: flex-start;
+    
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    height:50%;
+  }
+
+  .introduction {
+    font-size: 8vw;
+  }
+
+  .job-role {
+    font-size: 9vw;
+    width: 100%;
+  }
+
+  .paragraph {
+    display: inline-block;
+
+    width: 100%;
+    height: 30%;
+    font-size: 5vw;
+    font-weight: lighter;
+  }
+
+  .profile-div {
+    height: 30%;
+   
+  }
+
+  .button-div {
+    height: 10%;
+  }
 }

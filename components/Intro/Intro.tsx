@@ -20,14 +20,15 @@ function Intro() {
           ligula sed libero aliquet gravida.
         </p>
       </div>
+     
+      <div className={styles["profile-div"]}>
+        <Image className={styles["image-div"]} src={profile} alt="profile"/>
+        <div className={styles["square-border"]}></div>
+      </div>
       <div className={styles["button-div"]}>
        {/*  <button className={styles.button}>Contact Me</button> */}
        {/*  <p className={styles.seemore}>See More</p> */}
         <Link className="w-8" href='#projects' scroll={false}><SlArrowDown className={styles.downarrow}/></Link>
-      </div>
-      <div className={styles["profile-div"]}>
-        <Image className={styles["image-div"]} src={profile} alt="profile"/>
-        <div className={styles["square-border"]}></div>
       </div>
     </div>
   );
