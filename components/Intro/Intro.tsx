@@ -15,9 +15,8 @@ function Intro() {
         <h1 className={styles["job-role"]}>Full-Stack Developer</h1>
 
         <p className={styles["paragraph"]}>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget
-          risus hendrerit, varius augue vitae, pharetra orci. Integer pretium
-          ligula sed libero aliquet gravida.
+        Changing careers has allowed me to build on my passions for Music and Mathematics, blending the strong technical and creative skills I've learnt, to build robust and efficient solutions to complex problems.
+
         </p>
       </div>
      
