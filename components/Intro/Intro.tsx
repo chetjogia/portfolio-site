@@ -15,7 +15,7 @@ function Intro() {
         <h1 className={styles["job-role"]}>Full-Stack Developer</h1>
 
         <p className={styles["paragraph"]}>
-        Changing careers has allowed me to build on my passions for Music and Mathematics, blending the strong technical and creative skills I've learnt, to build robust and efficient solutions to complex problems.
+        Changing careers has allowed me to build on my passions for Music and Mathematics, blending the strong technical and creative skills I&apos;ve learnt, to build robust and efficient solutions to complex problems.
 
         </p>
       </div>
