@@ -1,4 +1,4 @@
-//Nodemailer email code, not in use currently -> using Email JS
+
 
 
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction

@@ -1,6 +1,6 @@
 import styles from "./intro.module.css";
 import Image from "next/image";
-import profile from "../../images/chetjogiaprofile.png"
+import profile from "../../images/IMG_9589.png"
 import {SlArrowDown} from 'react-icons/sl'
 import Link from "next/link";
 
