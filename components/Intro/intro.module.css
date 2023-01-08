@@ -11,6 +11,11 @@
   scroll-behavior: smooth;
 }
 
+.image-div{
+  border: solid;
+  border-width: 2px;
+}
+
 .container:after {
   position: relative;
   content: "";
@@ -110,6 +115,7 @@
 
 .profile-div > img {
   z-index: 1;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .square-border {

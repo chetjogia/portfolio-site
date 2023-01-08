@@ -1,7 +1,7 @@
 import * as React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import profile from "../../images/chetjogiaprofile.png"
+import profile from "../../images/IMG_9589.png"
 import {useState} from "react"
 
 
