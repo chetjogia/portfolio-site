@@ -3,20 +3,25 @@ import projectImage1 from "../../images/chetjogiasiteimage.png";
 import styles from "./Card.module.css";
 import {FaGithub} from "react-icons/fa"
 import {MdOutlineLaunch} from "react-icons/md"
+import {IoConstructOutline} from 'react-icons/io5'
+import {RxDoubleArrowUp} from 'react-icons/rx'
 
 function Card() {
   return (
     <div className={styles["card-content"]}>
       <div className={styles["image-div"]}>
-      <Image src={projectImage1} alt="project1" className={styles["card-image"]} /> 
+        <IoConstructOutline size="auto" className={styles["construction"]}/>
+{/*       <Image src={projectImage1} alt="project1" className={styles["card-image"]} />  */}
       </div>
 
       <div className={styles["card-body"]}>
         <div className={styles["text"]}>
-        <h3 className={styles["project-header"]}>Project Title</h3>
+          <div className={styles["project-header-div"]}>
+          <h3 className={styles["project-header"]}>Project Coming Soon</h3> <RxDoubleArrowUp size="auto" className={styles["uparrow"]}/>
+          </div>
+    
         <p className={styles["project-body"]}>
-          This project was created using a PERN stack and I learnt how to do a
-          lot of things
+         Coming soon
         </p>  
 
         </div>
