@@ -20,7 +20,7 @@
   grid-column-end: 8;
   grid-row-start: 2;
   grid-row-end: 5;
-  gap: 3vw;
+  gap: 1vw;
   overflow: hidden;
 }
 
@@ -30,7 +30,7 @@
 }
 
 .header > p {
-  font-size: min(3vh, 3vw);
+  font-size: 1.8vw;
   font-weight: lighter;
 }
 

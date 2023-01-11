@@ -1,15 +1,22 @@
 import styles from "./WorkExperience.module.css"
 
-function WorkExperience() {
+interface Experience{
+  title: string;
+  date: string;
+  description: string;
+}
+
+
+function WorkExperience(props:Experience) {
   return (
     <div className={styles["work-exp"]}>
       <div className={styles["header"]}>
-        <h4>UBS</h4>
-        <p>16/02/2022-18/02/2022</p>
+        <h4>{props.title}</h4>
+        <p>{props.date}</p>
       </div>
       <div className={styles["work-body"]}>
         <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer eget risus hendrerit, varius augue vitae, pharetra orci. Integer pretium ligula sed libero aliquet gravida.
+        {props.description}
         </p>
       </div>
     </div>
