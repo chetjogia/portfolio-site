@@ -43,6 +43,8 @@ function Form() {
    });
     }
 
+
+
   }
 
   return (
@@ -114,11 +116,13 @@ function Form() {
 
         <button
           type="submit"
-          className="mt-3 px-4 py-2 font-bold text-white bg-light-coral rounded-xl"
+          className={styles["button-form"]}
+         
         >
           Submit
         </button>
       </form>
+      <p className="success-submit" hidden={true}>Thanks for your message!</p>
     </div>
   );
 }
