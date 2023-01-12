@@ -33,3 +33,13 @@
 .work-body>p{
     font-size: min(1rem,2vw);
 }
+
+.header-title{
+    display:flex;
+    flex-direction: column;
+}
+
+.header-title>p{
+    font-size: 0.8rem;
+    font-style: italic;
+}
