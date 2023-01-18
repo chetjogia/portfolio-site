@@ -1,11 +1,16 @@
 @media (hover) {
   .card-content {
     position: relative;
-    aspect-ratio: 1;
+    display:flex;
     border-radius: 10px;
-    overflow: hidden;
-
+   border: solid;
+   border-color: lightcoral;
+    max-width:30%;
+    height:100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow: hidden;
+    align-self: center;
+    
   }
 
   .card-content::before {
@@ -16,29 +21,26 @@
     left: 0;
     top: 0;
     right: 0;
+    overflow: hidden;
+    
   }
 
   .image-div{
-    display:flex;
-    background-color:hsl(0 79% 72%/0.5);
-    height:100%;
-    width:100%;
-    
-    overflow: visible;
-
+    position:relative;
+    display: flex;
   }
+
   .uparrow{
     align-self: center;
     justify-self: center;
     color:white;
-    margin-left: 3vw;
-   
-    height: 1.5vw;
+    height:70%;
     width: auto;
   }
 
   .project-header-div{
     display:flex;
+    justify-content: space-around;
     margin-top: 0.2vw;
     height:20%;
   }
@@ -50,13 +52,7 @@
     color:#07004D;
   }
 
-  .card-image {
-    border:solid;
-    border-color:red;
-    object-fit: cover;
 
-    align-self: center;
-  }
 
   .card-content:hover > .card-body,
   .card-content:focus > .card-body {
@@ -76,39 +72,42 @@
     display: flex;
     flex-direction: column;
     position: absolute;
-    gap: 1em;
+    gap: 2em;
     bottom: 0;
     top: 0;
     left: 0;
     right: 0;
-    transform: translateY(85%);
+    transform: translateY(83%);
     transition: backdrop-filter 700ms ease-in, transform 400ms ease-in,
       background-color 700ms ease-in;
     background-color: hsl(245 57% 21%/0.5);
+    backdrop-filter: blur(10px);
   }
 
   .card-content:hover > .card-body > .text > .project-body {
     opacity: 1;
   }
 
+  .card-content:hover > .card-body > .text > .project-tech {
+    opacity: 1;
+  }
+
+
   .button-container {
-    position: absolute;
-    padding: 0.5rem 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    position: relative;
     gap: 3vw;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
     transition: opacity 1000ms ease;
+    margin:0;
   }
 
   .icon {
-    height: min(3rem,4vw);
+    height: min(2.3rem,4vw);
     color: white;
-    padding: 0.2rem;
+
   }
 
   .project-header {
@@ -119,13 +118,16 @@
     font-weight: bold;
     width: fit-content;
     font-size: 1vw;
-    padding-left: 1rem;
+
     padding-top: 0.2rem;
     color: white;
     transition: color 500ms ease;
     align-self: center;
     justify-self: center;
+    font-size: calc(0.5rem + 0.6vw);
   }
+
+  
 
   .project-body:after {
     position: absolute;
@@ -133,8 +135,8 @@
     left: 0;
     top: 0;
     height: 3px;
-    width: calc(100% - 2rem);
-    margin-top: -0.6rem;
+    width: calc(100% );
+    margin-top: -0.8rem;
     background-color: lightcoral;
     transform: translateX(-100%);
     transform-origin: left;
@@ -152,12 +154,27 @@
 
   .project-body {
     position: relative;
+   
+    opacity: 0;
+
+    transition: opacity 1300ms ease-in;
+    color: white;
+    padding: 0;
+    padding: 0 1rem;
+    font-size: calc(0.3rem + 0.6vw)
+  }
+
+  .project-tech{
+    position: relative;
     opacity: 0;
     transition: opacity 1300ms ease-in;
     color: white;
     padding: 0;
     padding: 0 1rem;
-    font-size: min(0.8rem, 1.4vw);
+    font-size: calc(0.3rem + 0.5vw);
+    font-style: italic;
+
+
   }
 }
 

@@ -4,10 +4,13 @@
   grid-column-start: 2;
   grid-column-end: 8;
   grid-row-start: 5;
-  grid-row-end: 9;
+
   justify-content: space-evenly;
- margin-top: 2rem;
-  height: min(100%, 20vw);
+  margin-top: 2%;
+  min-height: fit-content;
+  height: 400%;
+  width:100%;
+ 
 }
 
 @media (max-width: 450px) {
