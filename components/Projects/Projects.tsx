@@ -11,7 +11,7 @@ function Projects() {
       <div className={styles["header"]}>
         <h1>Projects</h1>
         <p>
-          In my spare time, I enjoy working on small side-projects, consolidating the skills I&apos;ve learnt whilst build upon them by exploring new technologies. These applications also allow me to express my creativity by allowing me to try new ideas that can address real-world problems.
+          In my spare time, I enjoy working on small side-projects, consolidating the skills I&apos;ve learnt whilst building upon them by exploring new technologies. These applications also allow me to express my creativity by allowing me to try new ideas that can address real-world problems.
         </p>
       </div>
     <CardContainer/>
