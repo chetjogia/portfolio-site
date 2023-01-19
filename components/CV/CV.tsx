@@ -22,7 +22,7 @@ let childhood_exp = {title: "Student", location:"Trinity School Croydon", date:"
     <div id="CV" className={styles["container"]}>
       <div className={styles["header"]}>
         <h1>My Journey So Far...</h1>
-        <p>Click <Link href="/Chetan_Jogia_Resume_copy.pdf" target="_blank" className={styles["CV-download"]}>here</Link> to download full CV</p>
+        <p>Click <Link href="/Chetan_Jogia_Resume_copy.pdf" target="_blank" className={styles["CV-download"]}>here</Link> to download my full CV</p>
       </div>
       <div className={styles["work-exp"]}>
         <div className={styles["exp-1"]}>
