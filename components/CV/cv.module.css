@@ -10,6 +10,11 @@
   scroll-behavior: smooth;
 }
 
+.CV-download{
+  text-decoration: underline;
+  color:blue;
+}
+
 .container:before {
   position: relative;
   content: "";
@@ -34,6 +39,7 @@
   grid-row-end: 2;
   margin-top: 1.5rem;
   justify-content: flex-end;
+  z-index: 1;
 }
 
 .header > h1 {
@@ -136,7 +142,7 @@
     grid-column-start: 1;
     grid-column-end: 6;
     clip-path: polygon(0% 0%, 40% 0%, 100% 100%, 0 100%);
-    z-index: 0;
+    z-index: -1;
   }
 
   .work-exp{
@@ -198,5 +204,9 @@
     margin-top: 2rem;
 
   }
+ 
   
+
+
+
 }
